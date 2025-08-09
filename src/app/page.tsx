@@ -7,13 +7,13 @@ export default function Home() {
   const [count, setCount] = useState(0);
 
   // 操作用の関数に分離
-  const decrement = () => setCount((c) => c - 1);
+  const decrement = () => setCount((c) => c);
   const reset = () => setCount(0);
   const increment = () => setCount((c) => c + 1);
-  const decrement10 = () => setCount((c) => c - 10);
-  const increment10 = () => setCount((c) => c + 10);
-  const double = () => setCount((c) => c * 2);
-  const negate = () => setCount((c) => -c);
+  const decrement10 = () => setCount((c) => c);
+  const increment10 = () => setCount((c) => c);
+  const double = () => setCount((c) => c);
+  const negate = () => setCount((c) => c);
 
   // 背景アニメーションへ通知（グローバルイベント）
   useEffect(() => {
