@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import CounterButton from "@/components/CounterButton";
 
 export default function Home() {
   const [count, setCount] = useState(0);
@@ -22,7 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
       <main className="w-full max-w-md rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-neutral-900 p-8 text-center shadow-sm">
-        <h1 className="text-2xl font-bold mb-6">カウントアプリ</h1>
+        <h1 className="text-2xl font-bold mb-6">Count Shapes</h1>
         <div
           className="text-6xl font-mono font-semibold mb-8 select-none"
           aria-live="polite"
@@ -31,65 +32,30 @@ export default function Home() {
           {count}
         </div>
         <div className="flex gap-3 justify-center">
-          <button
-            type="button"
-            onClick={decrement}
-            className="h-10 px-4 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-neutral-800 transition"
-            aria-label="カウントを1減らす"
-          >
+          <CounterButton onClick={decrement} ariaLabel="カウントを1減らす">
             -1
-          </button>
-          <button
-            type="button"
-            onClick={reset}
-            className="h-10 px-4 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-neutral-800 transition"
-            aria-label="カウントをリセット"
-          >
+          </CounterButton>
+          <CounterButton onClick={reset} ariaLabel="カウントをリセット">
             リセット
-          </button>
-          <button
-            type="button"
-            onClick={increment}
-            className="h-10 px-4 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
-            aria-label="カウントを1増やす"
-          >
+          </CounterButton>
+          <CounterButton onClick={increment} ariaLabel="カウントを1増やす">
             +1
-          </button>
+          </CounterButton>
         </div>
         {/* 追加の操作ボタン行 */}
         <div className="mt-3 flex gap-3 justify-center">
-          <button
-            type="button"
-            onClick={decrement10}
-            className="h-10 px-4 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-neutral-800 transition"
-            aria-label="カウントを10減らす"
-          >
+          <CounterButton onClick={decrement10} ariaLabel="カウントを10減らす">
             -10
-          </button>
-          <button
-            type="button"
-            onClick={double}
-            className="h-10 px-4 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-neutral-800 transition"
-            aria-label="カウントを2倍にする"
-          >
+          </CounterButton>
+          <CounterButton onClick={double} ariaLabel="カウントを2倍にする">
             ×2
-          </button>
-          <button
-            type="button"
-            onClick={negate}
-            className="h-10 px-4 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-neutral-800 transition"
-            aria-label="カウントの符号を反転する"
-          >
+          </CounterButton>
+          <CounterButton onClick={negate} ariaLabel="カウントの符号を反転する">
             +/-
-          </button>
-          <button
-            type="button"
-            onClick={increment10}
-            className="h-10 px-4 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
-            aria-label="カウントを10増やす"
-          >
+          </CounterButton>
+          <CounterButton onClick={increment10} ariaLabel="カウントを10増やす">
             +10
-          </button>
+          </CounterButton>
         </div>
       </main>
     </div>
