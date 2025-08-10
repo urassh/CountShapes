@@ -10,8 +10,13 @@ export default function Home() {
   const decrement = () => setCount((c) => c - 1);
   const reset = () => setCount(0);
   const increment = () => setCount((c) => c + 1);
+<<<<<<< HEAD
+  const decrement10 = () => setCount((c) => c - 10 - 100 - 1000);
+  const increment10 = () => setCount((c) => c);
+=======
   const decrement10 = () => setCount((c) => c - 10);
   const increment10 = () => setCount((c) => c + 10);
+>>>>>>> main
   const double = () => setCount((c) => c);
   const negate = () => setCount((c) => c);
 
