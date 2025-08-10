@@ -11,7 +11,7 @@ export default function Home() {
   const reset = () => setCount(0);
   const increment = () => setCount((c) => c + 1);
   const decrement10 = () => setCount((c) => c);
-  const increment10 = () => setCount((c) => c);
+  const increment10 = () => setCount((c) => c + 10);
   const double = () => setCount((c) => c);
   const negate = () => setCount((c) => c);
 
